@@ -1,0 +1,65 @@
+# EXERCÍCIOS DE REVISÃO
+
+4. Com que valores ficam as variáveis nas seguintes atribuições:
+    4.1 b = (2 > 3) -> False
+    4.2 x = 3
+        x, y = x + 1, x + 1 -> x = 4, y = 4
+    4.3 c = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[10] -> "K"
+    4.4 ci = ord("ABCDEFGHIJKLMNOPQRSTUVWXYZ"[-16]) -> 75
+    4.5 d = (2.5 * (4.0 ** (11 % 4))) + ord('a') -> 257.0
+    4.6 ck = 'U42'[2 != 2 + 1] -> '4'
+
+5. Considerando que inicialmente nome = "FERNANDO MANUEL", indique os valores das seguintes expressões:
+    5.1 nome[3] = 'N'
+    5.2 nome[3:6] = 'NAN'
+    5.3 nome[3:] = 'NANDO MANUEL'
+    5.4 nome[-3] = 'U'
+    5.5 nome[-3:] = 'UEL'
+    5.6 nome[0:-3] = 'FERNANDO MAN'
+    5.7 nome[:-3] = 'FERNANDO MAN'
+    5.8 nome[-5:-3] = 'AN'
+    5.9 nome[len(nome)-1] = 'L'
+    5.10 nome[-1] = 'L'
+    5.11 nome[-len(nome)] = 'F'
+    5.12 nome[-len(nome) + 2] = 'R'
+    5.13 nome[-10:10] = 'NDO M'
+
+6. Quais das seguintes condições são sempre verdadeiras?
+    6.1 (x < y) or (x >= y) -> V
+    6.2 (x == y) and (x != y) -> F
+    6.3 not ((x == y) and (x != y)) -> V
+    6.4 (x <= 1) and (x >= 1) -> V se x == 1, F senão
+
+7. Os seguintes programas ou fragmentos de programas apresentam alguns erros. Corrija-os:
+
+    x = 2 + "2"                                 | x = 2 + 2
+    y = "abc".len()                             | y = len("abc")
+
+    x = 19.0                                    | x = 19.0
+    #...                                        | #...
+    print("Valor de X:" x, "Dobro X:" 2*x ]     | print("Valor de X:", x, "Dobro X:" 2*x)
+
+    x = 2.9                                     | x = 2.9
+    print(str[x] + ' 19')                       | print(str(x) + ' 19')
+
+    Import Decimal                              | Import Decimal
+    x = 10                                      | x = 10
+    1+=x                                        | x += 1
+    y = x + '1'                                 | y = str(x) + '1'
+    input(y)                                    | print(y)
+
+8. O que é exibido pelas seguinte instruções (se executadas através de um script):
+    x, y = 2, 3                                     |
+    print("XY -> " + str(x) + str(y))               | XY -> 23
+    print("X+Y ->", x+y)                            | X+Y -> 5
+    x *= 6; y *= 2                                  |
+    print("X/Y ->", x/y)                            | X/Y -> 2
+
+    x = 'Alberto'                                   |
+    print(x[0], x[3], x[-1], sep='/', end='$')      | A/e/o$b r
+    print(x[2], x[4])                               | 
+
+    x, y = 3, 4                                     |
+    x, y = y + 1, x + 1                             | 
+    z = 2**y + x                                    | 
+    print(x, y, z)                                  | 5, 4, 21
