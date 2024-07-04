@@ -92,9 +92,9 @@
 
     nome = input("Nome? ")              | nome = input("Nome? ")
     match nome:                         | 
-        case 'Alberto' | 'Armando':     | if nome == 'Alberto' || nome == 'Armando':
+        case 'Alberto' | 'Armando':     | if nome == 'Alberto' or nome == 'Armando':
             print("Bom rapaz")          |    print("Bom rapaz")  
-        case 'Arnaldo' | 'Augusto':     | elif nome == 'Arnaldo' || nome == 'Augusto':
+        case 'Arnaldo' | 'Augusto':     | elif nome == 'Arnaldo' or nome == 'Augusto':
             print("Gente estranha...")  |    print("Gente estranha...")
         case _:                         | else:
             print("Desconheço...")      |    print("Desconheço...")

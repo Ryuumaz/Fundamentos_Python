@@ -1,0 +1,84 @@
+5. Vamos rever alguns tópicos deste e de outros laboratórios. Com que valores ficam as variáveis nas seguintes atribuições:
+    5.1 b, c, d = not [], not [[]], not 'Alberto' => True, False, False 
+    5.2 x , y, z = 2 is 2, [2] is [2], 2 == 2 => Syntax error
+    5.3 c = '.'.join("ABCDEFGHIJKLMNOPQRSTUVWXYZ")[10] => F
+    5.4 m = 5/2 + 5//2 + 5%2 + 5**2 => 30.5
+    5.5 p = [1, 2, 3, 4][:3][-3] + [1, 2, 3, 4][:3][2] => 4
+    5.6 x = [{'a': 1, 'b': 2}, {'a': 10, 'b': 20}][:-1][0]['b'] => 2
+    5.7 g = ord('g') - ord('f') => 1
+    5.8 r = 4 * 3 ** 2 => 36
+
+6. O que é exibido pelas seguinte instruções (se executadas através de um script):
+    pessoa = {'nome': 'alberto', 'idade': 23, 'altura': 190}    | 
+    print(pessoa['nome'].upper())                               | ALBERTO
+    print(pessoa.get(pessoa['idade'], 'altura'))                | altura
+
+    nums = (10, 20, 30)                                         |    
+    i = 0                                                       | 20
+    while i < len(nums):                                        | 40
+        print(nums[i] * 2)                                      | 60 
+        i += 1                                                  |  
+
+    txt = 'A#$BD1!e'                                            | A => True 
+    i = 0                                                       | $ => False
+    while i < len(txt):                                         | D => True
+        print(f"{txt[i]} => {txt[i].isalpha()}")                | ! => False
+        i += 2                                                  |
+
+    txt = 'AB1#C'                                               | A => a
+    for caractere in txt:                                       | B => b
+        print(f"{caractere} => {caractere.lower()}")            | 1 => 1
+                                                                | # => #
+                                                                | C => c
+
+    nums = [10, 20, 30]                                         | 
+    for num in nums:                                            | 10
+        num *= 2                                                | 20
+    for num in nums:                                            | 30
+        print(num)                                              |
+
+    nums = [10, 20, 30]                                         |
+    i = 0                                                       | 
+    while i < len(num):                                         | 
+        num *= 2                                                | 
+        i += 1                                                  | 
+    for num in nums:                                            |
+        print(num)                                              |
+
+    txt = 'ABCXYZ'                                              | 0 => A
+    i = 0                                                       |  1 => B
+    while i < len(txt):                                         |   2 => C
+        print(f"{' ' * i}{i} => {txt[i]}")                      |    3 => X
+        i += 1                                                  |     4 => Y
+                                                                |      5 => Z
+    
+    formulas = [[1, -1, 2], [3, 2, 2]]                          |
+    m = formulas[:]                                             | 
+    m[0] = [9, 9, 9]                                            |  
+    print(m, '--', formulas[0])                                 | [[9, 9, 9], [3, 2, 2]] -- [1, -1, 2]
+    m = formulas[:]                                             |
+    m[0][0] = 9                                                 |
+    print(m, '--', formulas[0])                                 | [[9, -1, 2], [3, 2, 2]] -- [9, -1, 2]
+
+    t = (1, 2, 3)                                               |
+    print(t[-1:])                                               | (3,)
+    vals = [10, 20, 30]                                         |
+    vals[-2:] = t                                               |
+    print(vals)                                                 | [10, 1, 2, 3]
+
+8. Converta os seguintes ciclos while/for em ciclos for/while: (consulte a documentação a respeito da "função" range).
+    i = 0                           | 
+    while i < 10:                   | for i in range(0, 10, 2):
+        print(i)                    |   print(i)
+        i += 2                      |
+
+    for k in range(10, 2, -2):      | i = 10 
+        print(k)                    | while i > 2: 
+                                    |   print(i)
+                                    |   i -= 2
+
+    nums = (10, 2, 7, 9, 6, 5, 8)   |
+    i = 0                           | for i in range(0, len(nums), 2): 
+    while i < len(nums):            |   print(nums[i])
+        print(nums[i])              |
+        i += 2                      |

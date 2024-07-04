@@ -1,4 +1,4 @@
-"""
+'''
 ENUNCIADO
     1. Pedir uma classificação quantitativa ao utilizador (deve estar entre 0 e 20)
     2. Exibir classificação qualitativa da classificação quantitativa introduzida:
@@ -24,7 +24,7 @@ EXEMPLO:
     $ python classificacao_qualitativa1.py
     Insira uma classificação: 31
     ATENÇÃO: classificação 31 INVÁLIDA!
-"""
+'''
 
 nota = int(input("Indica a tua nota (0-20): "))
 
